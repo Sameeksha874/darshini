@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Credit Card Validation</title> 
+</head> 
+<body> 
+    <h1>Credit Card Validation</h1> 
+    <input type="text" id="creditCard" placeholder="Enter credit card number"> 
+    <button onclick="validateCreditCard()">Validate</button> 
+    <div id="creditCardMessage"></div> 
+     
+    <script> 
+        function validateCreditCard() { 
+            const cardNumber = document.getElementById('creditCard').value; 
+            const message = document.getElementById('creditCardMessage'); 
+            const regex = /^\d{16}$/; 
+             
+            if (regex.test(cardNumber)) { 
+                message.innerText= 'Valid credit card number';
+                  } else { 
+                message.innerText = 'Invalid credit card number'; 
+            } 
+        } 
+    </script> 
+</body> 
+</html>
