@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Form Display Example</title> 
+     
+    <style> 
+         
+        form { 
+            background-color: #fff; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px #00000018; 
+            width: 400px;  
+        } 
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            color: #333; 
+        } 
+        button{
+             padding: 10px; 
+            background-color: green; 
+            margin: 10px 20px 40 px; 
+            display: block; 
+        } 
+    </style> 
+</head> 
+<body> 
+        <h1>Enter Your Details</h1> 
+        <form  onsubmit="displayValues()"> 
+            <label for="name">Name:</label> 
+            <input type="text" id="name"  required > 
+            
+            <label for="USN">USN:</label> 
+            <input type="text" id="USN"  required> 
+            <label for="email">Email:</label> 
+            <input type="email" id="email" required> 
+            <button >Submit</button> 
+        </form> 
+   
+       
+    <script> 
+        function displayValues() { 
+            // Get values from form fields 
+            let name = document.getElementById("name").value; 
+  let usn = document.getElementById("USN").value; 
+            let email = document.getElementById("email").value; 
+             
+            // Create a message to display 
+            let message = "Name : " + name +"\n"+"USN :"+usn+"\n"+ "Email :" + email; 
+          
+            // to display the input fields 
+        alert("Entered details :"+message); 
+        } 
+    </script> 
+</body> 
+</html> 
+ 
